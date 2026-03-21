@@ -2,320 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="yotor.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#0a1320" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Yohannes Dawit portfolio: full-stack development, frontend engineering, and web security projects with measurable product outcomes."
     />
+    <meta name="keywords" content="Yohannes Dawit, Full-Stack Developer, Frontend Developer, Web Security, React Portfolio" />
+    <meta name="author" content="Yohannes Dawit" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yohannes Dawit | Full-Stack Developer and Security Engineer" />
+    <meta
+      property="og:description"
+      content="A recruiter-ready portfolio featuring case-study projects, engineering practices, and cybersecurity-focused experiments."
+    />
+    <meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
+    <meta property="og:url" content="https://yohannesdawit21.github.io/Portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Yohannes Dawit | Full-Stack Developer and Security Engineer" />
+    <meta
+      name="twitter:description"
+      content="Portfolio with modern product engineering case studies and security experimentation."
+    />
+    <meta name="twitter:image" content="%PUBLIC_URL%/logo512.png" />
+    <link rel="canonical" href="https://yohannesdawit21.github.io/Portfolio" />
+    <link rel="icon" href="%PUBLIC_URL%/yotor.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/icon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Yohannes-Dawit Portfolio</title>
-  
-     <body>
-    <!-- ===== HEADER (Navigation across 'pages') ===== -->
-    <header class="header">
-      <div class="container" style="display:flex;align-items:center;justify-content:space-between;height:64px;">
-        <a href="#home" class="logo">Yotor</a>
-        <nav aria-label="Main">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#testimonials">Testimonial</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- ===== PAGE: HOME ===== -->
-    <main id="home" class="container" role="main">
-      <!-- SECTION: Hero -->
-      <section aria-labelledby="hero-title" class="grid" style="grid-template-columns:1.2fr .8fr;align-items:center;gap:24px">
-        <div>
-          <h1 id="hero-title">Hi, I’m <span style="color: blue;">Yohannes Dawit </span> frontend developer and web Penetration Tester</h1>
-          <p class="lead">"Creative Coder. Strategic Problem Solver. Web Security Defender". Based in Addis Ababa, Ethiopia . I build crisp, fast, and accessible web experiences.</p>
-          <div class="row" style="margin-top:12px">
-            <a class="btn" href="#projects">View Work</a>
-            <a class="btn secondary" href="#contact">Contact</a>
-          </div>
-        </div>
-        <div style="text-align:right">
-          <img class="avatar" src="./MyProfile.JPG" alt="Portrait of Yohannes Dawit" />
-        </div>
-      </section>
-
-      <!-- SECTION: Featured Skills -->
-      <section aria-labelledby="skills-title" style="margin-top:28px">
-        <h2 id="skills-title">Featured Skills and Tools</h2>
-        <div class="grid grid-2">
-          <!-- Skill item -->
-          <article class="card" aria-labelledby="skill-BurpSuite">
-            <div class="row" style="justify-content:space-between;align-items:center">
-              <strong id="skill-BurpSuite">BurpSuite</strong>
-              <span class="pill"><span>Level</span><b>3/5</b></span>
-            </div>
-            <div class="progress" role="progressbar" aria-label="BurpSuite level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
-              <i style="width:60%"></i>
-            </div>
-          </article>
-          <article class="card" aria-labelledby="skill-kali-Linux">
-            <div class="row" style="justify-content:space-between;align-items:center">
-              <strong id="skill-kali-Linux">kali-Linux</strong>
-              <span class="pill"><span>Level</span><b>3.5/5</b></span>
-            </div>
-            <div class="progress" role="progressbar" aria-label="kali-Linux level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
-              <i style="width:70%"></i>
-            </div>
-          </article>
-          <article class="card" aria-labelledby="skill-Nmap">
-            <div class="row" style="justify-content:space-between;align-items:center">
-              <strong id="skill-Nmap">Nmap</strong>
-              <span class="pill"><span>Level</span><b>3.5/5</b></span>
-            </div>
-            <div class="progress" role="progressbar" aria-label="BurpSuite level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
-              <i style="width:70%"></i>
-            </div>
-          </article>
-          <article class="card" aria-labelledby="skill-react">
-            <div class="row" style="justify-content:space-between;align-items:center">
-              <strong id="skill-react">React</strong>
-              <span class="pill"><span>Level</span><b>4/5</b></span>
-            </div>
-            <div class="progress" role="progressbar" aria-label="React level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
-              <i style="width:80%"></i>
-            </div>
-          </article>
-
-          <article class="card" aria-labelledby="skill-js">
-            <div class="row" style="justify-content:space-between;align-items:center">
-              <strong id="skill-js">JavaScript</strong>
-              <span class="pill"><span>Level</span><b>4/5</b></span>
-            </div>
-            <div class="progress" role="progressbar" aria-label="JavaScript level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
-              <i style="width:80%"></i>
-            </div>
-          </article>
-
-          <article class="card" aria-labelledby="skill-CSS">
-            <div class="row" style="justify-content:space-between;align-items:center">
-              <strong id="skill-CSS">CSS</strong>
-              <span class="pill"><span>Level</span><b>4/5</b></span>
-            </div>
-            <div class="progress" role="progressbar" aria-label="CSS level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
-              <i style="width:80%"></i>
-            </div>
-          </article>
-
-          <article class="card" aria-labelledby="skill-HTML">
-            <div class="row" style="justify-content:space-between;align-items:center">
-              <strong id="skill-HTML">HTML</strong>
-              <span class="pill"><span>Level</span><b>4/5</b></span>
-            </div>
-            <div class="progress" role="progressbar" aria-label="HTML level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
-              <i style="width:80%"></i>
-            </div>
-          </article>
-          <article class="card" aria-labelledby="skill-Python">
-            <div class="row" style="justify-content:space-between;align-items:center">
-              <strong id="skill-Python">Python</strong>
-              <span class="pill"><span>Level</span><b>2.5/5</b></span>
-            </div>
-            <div class="progress" role="progressbar" aria-label="Python level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
-              <i style="width:50%"></i>
-            </div>
-          </article>
-          <article class="card" aria-labelledby="skill-C++">
-            <div class="row" style="justify-content:space-between;align-items:center">
-              <strong id="skill-C++">C++</strong>
-              <span class="pill"><span>Level</span><b>4/5</b></span>
-            </div>
-            <div class="progress" role="progressbar" aria-label="C++ level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
-              <i style="width:80%"></i>
-            </div>
-          </article>
-          <article class="card" aria-labelledby="skill-Java">
-            <div class="row" style="justify-content:space-between;align-items:center">
-              <strong id="skill-Java">Java</strong>
-              <span class="pill"><span>Level</span><b>4/5</b></span>
-            </div>
-            <div class="progress" role="progressbar" aria-label="Java level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
-              <i style="width:80%"></i>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- SECTION: Selected Projects -->
-      <section id="projects" aria-labelledby="projects-title" style="margin-top:28px">
-        <h2 id="projects-title">Project ideas</h2>
-        <div class="grid grid-2">
-          <article class="card">
-            <img src="./HU GPS.jpg" alt="haramaya picture" style="width:100%;height:160px;object-fit:cover;border-radius:12px" />
-            <h3 style="margin-top:10px">Project One</h3>
-            <p class="muted">campus  GPS For Fresh man students.</p>
-            <div class="row">
-              <span class="tag">React</span><span class="tag">API</span><span class="tag">UI</span>
-            </div>
-            <div class="row" style="margin-top:8px">
-              <a class="btn" href="#" target="_blank" rel="noreferrer">Live</a>
-              <a class="btn secondary" href="#" target="_blank" rel="noreferrer">Code</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="./moviePic.jpg" alt="Moive picture" style="width:100%;height:160px;object-fit:cover;border-radius:12px" />
-            <h3 style="margin-top:10px">Project Two</h3>
-            <p class="muted">Movie Rating and Recomendation website.</p>
-            <div class="row">
-              <span class="tag">React</span><span class="tag">API</span><span class="tag">UX</span>
-            </div>
-            <div class="row" style="margin-top:8px">
-              <a class="btn" href="#" target="_blank" rel="noreferrer">Live</a>
-              <a class="btn secondary" href="#" target="_blank" rel="noreferrer">Code</a>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <!-- ===== PAGE: ABOUT ===== -->
-    <section id="about" class="container" aria-labelledby="about-title">
-      <h1 id="about-title">About</h1>
-      <p class="lead">I’m a tech-driven innovator with 4+ years of blended experience from school projects and real-world work in technology, cyber safety, and digital design. Currently pursuing a Bachelor’s in Information Systems at Haramaya University (2023–2027),
-         I’m building strong expertise in cybersecurity, Python programming, and graphic design, while sharpening my ability to solve complex challenges with creativity and strategy.
-
-My skills span C++, Java, Python, JavaScript, and front-end web development, with practical knowledge in Kali Linux, penetration testing, and CTF competitions. Beyond coding, I love crafting digital designs and brand visuals that bring ideas to life and strengthen identity.
-
-Whether it’s building secure systems, defending against threats, or designing engaging digital experiences, I approach every project with the same passion: to merge creativity, security, and innovation for meaningful results.</p>
-
-      <!-- SECTION: Education -->
-      <section aria-labelledby="edu-title" style="margin-top:20px">
-        <h2 id="edu-title">Education</h2>
-        <div class="grid grid-2">
-          <article class="card">
-            <strong>Haramaya University</strong>
-            <p class="muted">B.Sc. in Information System 2023 — 2027</p>
-            <p>Currently leveling up in programming, web technologies, and cybersecurity. 
-              My journey here fuels the projects I build outside the classroom, 
-              blending academic knowledge with real-world problem solving. 
-              Builiding a strong foundation in programming(C++,Java,Python,JS...), software Development and cyber security.</p>
-            
-          </article>
-          <article class="card">
-            <strong>Mesob School of Art, Motion and Graphics desgin</strong>
-            <p class="muted">Graphics Design 72 Hours(3 Months) </p>
-            <p>Learned design principles, tools like Adobe Illustrator, Adobe photoshop and Canva.</p>
-            
-          </article>
-          <article class="card">
-            <strong>ALx Ethiopia</strong>
-            <p class="muted">Profeessional Development Skills For Digital Age </p>
-            <p>Completed a 2-month course on digital skills, focusing on web development, 
-              Google workspace ,Digital life style, Do Hard Things, and digital design.</p>
-          </article>
-
-          <!-- Add more as needed -->
-        </div>
-      </section>
-
-      <!-- SECTION: Experience -->
-      <section aria-labelledby="exp-title" style="margin-top:20px">
-        <h2 id="exp-title">Experience</h2>
-        <div class="grid grid-2">
-          <article class="card">
-            <strong>Frontend Developer — Freelance</strong>
-            <p class="muted">2023–Present</p>
-            <p>Built small to mid-size web apps, collaborated with stakeholders, and shipped accessible UIs.</p>
-          </article>
-        </div>
-      </section>
-    </section>
-
-    <!-- ===== PAGE: TESTIMONIALS ===== -->
-    <section id="testimonials" class="container" aria-labelledby="testimonials-title">
-      <h1 id="testimonials-title">Testimonials</h1>
-      <div class="grid grid-2">
-        <figure class="card">
-          <blockquote>“Delivered beyond expectations and on time.”</blockquote>
-          <figcaption class="muted" style="margin-top:8px">Yohannes Kebede —  IT Student</figcaption>
-        </figure>
-        <figure class="card">
-          <blockquote>“Clean code, clear communication, and great UX instincts.”</blockquote>
-          <figcaption class="muted" style="margin-top:8px"> Haramaya University — DSA Lecture</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ===== PAGE: CONTACT ===== -->
-    <section id="contact" class="container" aria-labelledby="contact-title">
-      <h1 id="contact-title">Contact</h1>
-      <p class="muted">I’m open to freelance work, internships, and collaborations. Use the email link below or any of my socials.</p>
-
-      <!-- SECTION: Contact Form (static markup) -->
-      <section aria-labelledby="contact-form-title" style="margin-top:14px" class="card">
-        <h2 id="contact-form-title" style="margin-bottom:10px">Say Hello</h2>
-        <form onsubmit="event.preventDefault()" aria-describedby="contact-help">
-          <div class="grid grid-2">
-            <label>
-              <span>Name</span><br />
-              <input required style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a3a62;background:#0f1830;color:#e8eefc" />
-            </label>
-            <label>
-              <span>Email</span><br />
-              <input type="email" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a3a62;background:#0f1830;color:#e8eefc" />
-            </label>
-          </div>
-          <label style="display:block;margin-top:10px">
-            <span>Message</span><br />
-            <textarea rows="4" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a3a62;background:#0f1830;color:#e8eefc"></textarea>
-          </label>
-          <div class="row" style="margin-top:12px">
-            <button class="btn" type="submit">Send</button>
-            
-          </div>
-        </form>
-      </section>
-
-      <!-- SECTION: Alternate Links -->
-      <section aria-labelledby="alt-links-title" style="margin-top:14px">
-        <h2 id="alt-links-title">Other ways to reach me</h2>
-        <ul>
-          <li>Email: <a href="mailto:yohannesdawit6777@gmail.com">yohannesdawit6777@gmail.com</a></li>
-          <li>GitHub: <a href="https://github.com/yohannesdawit21" target="_blank" rel="noreferrer">github.com/yohannesdawit21</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/yohannes-dawit-b13599305" target="_blank" rel="noreferrer">https://www.linkedin.com/in/yohannes-dawit</a></li>
-        </ul>
-      </section>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
-        <small>© <span id="y"></span> Yohannes Dawit. All rights reserved.</small>
-        <div class="row">
-          <a href="https://github.com/yohannesdawit21" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/yohannes-dawit-b13599305/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <!-- <a href="https://x.com/yourhandle" target="_blank" rel="noreferrer">Twitter</a> -->
-        </div>
-      </div>
-      <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
-    </footer>
+    <title>Yohannes Dawit | Full-Stack Developer and Security Engineer</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
   </body>
-  
 </html>
 
 
