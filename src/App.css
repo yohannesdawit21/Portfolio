@@ -152,6 +152,7 @@ svg {
   top: calc(100% + 0.35rem);
   left: 0;
   right: 0;
+  z-index: 130;
   padding: 0.45rem;
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -255,6 +256,7 @@ main.container {
 .status-pill {
   margin: 0;
   display: inline-flex;
+  flex-wrap: wrap;
   padding: 0.45rem 0.72rem;
   border-radius: 999px;
   border: 1px solid var(--border);
@@ -730,6 +732,7 @@ main.container {
   border-radius: 999px;
   text-decoration: none;
   padding: 0.45rem 0.72rem;
+  overflow-wrap: anywhere;
 }
 
 .site-footer {
@@ -759,6 +762,32 @@ main.container {
 }
 
 @media (max-width: 767px) {
+  .nav-shell {
+    justify-content: flex-start;
+  }
+
+  .theme-toggle {
+    order: 2;
+    margin-left: auto;
+    width: 42px;
+    min-width: 42px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .theme-toggle span {
+    display: none;
+  }
+
+  .nav-toggle {
+    order: 3;
+    margin-left: 0.4rem;
+  }
+
+  .site-nav {
+    top: calc(100% + 0.25rem);
+  }
+
   .reveal-ready [data-reveal] {
     opacity: 1;
     transform: none;
