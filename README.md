@@ -1,45 +1,63 @@
-# 🌐 Yohannes Dawit — Portfolio Website  
+# Yohannes Dawit Portfolio
 
-This is my personal developer portfolio website, built to showcase my skills, projects, and experience as a **Frontend Developer** and **Web Penetration Tester**.  
+Personal portfolio website focused on frontend engineering, full-stack development, and web security.
 
----
+## Features
 
-## ✨ Features
-- Responsive design (works on desktop & mobile).  
-- Smooth navigation with sticky header.  
-- Hero section introducing me and my expertise.  
-- Skills & tools with progress indicators.  
-- Project showcase with live/demo links.  
-- About section with education & experience.  
-- Testimonials for credibility.  
-- Contact form + direct links to email & socials.  
-- Clean, modern UI with custom CSS.  
+- Responsive layout for mobile, tablet, and desktop
+- Sticky navigation with smooth scrolling
+- Hero section with profile summary and clear call-to-actions
+- Recruiter brief generator with copy-to-clipboard support
+- Skills section with category filters and progress meters
+- Project case-study cards with impact metrics
+- Interactive labs section styled like a terminal
+- Contact section with working message form and social links
+- Light and dark theme toggle with persistence
 
----
+## Tech Stack
 
-## 🛠️ Tech Stack
-- **HTML5**  
-- **CSS3 (Custom styles, animations, scroll effects)**  
-- **JavaScript (vanilla)**  
-- **React (planned / optional for future features)**  
+- React
+- JavaScript (ES6+)
+- CSS (custom design system)
+- React Testing Library + Jest
 
----
+## Preview Assets
 
-## 📸 Preview
-![Portfolio Screenshot](./MyProfile.JPG)  
-*(replace with an actual screenshot of your website)*  
+Main visual assets are located in public/:
 
----
+- public/MyProfile.JPG
+- public/HU GPS.jpg
+- public/moviePic.jpg
 
-## 🚀 Getting Started  
-
-Clone the repository and open `index.html` in your browser.  
+## Getting Started
 
 ```bash
-# Clone repository
-git clone https://github.com/yohannesdawit21/portfolio.git
+# 1) Install dependencies
+npm install
 
-# Open project folder
-cd portfolio
+# 2) Start development server
+npm start
 
-# Open index.html in a browser
+# 3) Create production build
+npm run build
+
+# 4) Run tests
+npm test
+```
+
+## Project Structure
+
+```text
+src/
+  components/        # UI sections and reusable pieces
+  data/              # Portfolio content data
+  hooks/             # Custom hooks (theme and reveal behavior)
+  App.js             # Main app composition
+  App.css            # Main styling
+```
+
+## Deployment Notes
+
+The app builds into build/ and can be deployed to GitHub Pages, Netlify, Vercel, or any static hosting provider.
+
+If you deploy to a subpath (for example GitHub Pages), set the correct homepage field in package.json.

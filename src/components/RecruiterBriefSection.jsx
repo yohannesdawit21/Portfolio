@@ -11,8 +11,39 @@ const RecruiterBriefSection = ({ briefs, candidateName }) => {
 
   const recruiterNote = `${candidateName} - ${activeBrief.role}\n\nSummary:\n${activeBrief.summary}\n\nKey strengths:\n- ${activeBrief.strengths.join('\n- ')}\n\nBusiness value:\n${activeBrief.value}`;
 
+  const copyWithFallback = async (text) => {
+    try {
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch (_error) {
+      // Fallback path below handles restricted clipboard contexts.
+    }
+
+    try {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'absolute';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      const copied = document.execCommand('copy');
+      document.body.removeChild(textarea);
+      return copied;
+    } catch (_error) {
+      return false;
+    }
+  };
+
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(recruiterNote);
+    const wasCopied = await copyWithFallback(recruiterNote);
+
+    if (!wasCopied) {
+      return;
+    }
+
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1500);
   };

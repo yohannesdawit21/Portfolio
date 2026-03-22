@@ -192,6 +192,12 @@ svg {
   background: color-mix(in srgb, var(--accent) 14%, transparent);
 }
 
+.nav-list a.active {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
 .theme-toggle {
   border: 1px solid var(--border);
   background: var(--surface);
@@ -596,6 +602,12 @@ main.container {
   background: var(--accent-strong);
 }
 
+.btn.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+  background: color-mix(in srgb, var(--accent) 75%, #6b7280);
+}
+
 .btn.ghost {
   background: var(--surface);
   color: var(--text);
@@ -669,6 +681,41 @@ main.container {
 .contact-panel {
   display: grid;
   gap: var(--space-3);
+}
+
+.contact-form {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.45rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-alt);
+  color: var(--text);
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 130px;
 }
 
 .contact-links {

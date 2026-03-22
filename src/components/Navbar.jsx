@@ -1,7 +1,59 @@
-import { memo, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 
 const Navbar = ({ navItems, themeControl }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState('#home');
+
+  useEffect(() => {
+    const sectionSelectors = navItems
+      .map((item) => item.href)
+      .filter((href) => typeof href === 'string' && href.startsWith('#') && href.length > 1);
+
+    const sections = sectionSelectors
+      .map((selector) => document.querySelector(selector))
+      .filter(Boolean);
+
+    const updateFromScrollPosition = () => {
+      if (window.scrollY < 120) {
+        setActiveHref('#home');
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntries = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((entryA, entryB) => entryB.intersectionRatio - entryA.intersectionRatio);
+
+        if (visibleEntries.length > 0) {
+          setActiveHref(`#${visibleEntries[0].target.id}`);
+        }
+      },
+      {
+        threshold: [0.2, 0.45, 0.7],
+        rootMargin: '-25% 0px -45% 0px'
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    const onHashChange = () => {
+      if (window.location.hash) {
+        setActiveHref(window.location.hash);
+      }
+    };
+
+    window.addEventListener('hashchange', onHashChange);
+    window.addEventListener('scroll', updateFromScrollPosition, { passive: true });
+    onHashChange();
+    updateFromScrollPosition();
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('hashchange', onHashChange);
+      window.removeEventListener('scroll', updateFromScrollPosition);
+    };
+  }, [navItems]);
 
   const handleToggle = () => {
     setIsOpen((prevState) => !prevState);
@@ -35,7 +87,12 @@ const Navbar = ({ navItems, themeControl }) => {
           <ul className="nav-list">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a href={item.href} onClick={handleClose}>
+                <a
+                  href={item.href}
+                  className={activeHref === item.href ? 'active' : ''}
+                  aria-current={activeHref === item.href ? 'page' : undefined}
+                  onClick={handleClose}
+                >
                   {item.label}
                 </a>
               </li>
